@@ -8,7 +8,9 @@ public class PromenaKursa implements KursInterfejs {
 
 	@Override
 	public boolean dodajKurs(String nazivValute, String skrNazivValute, String vrsta, double iznos,
-			GregorianCalendar datum) {				
+			GregorianCalendar datum) {			
+		if(datum!=null)
+			return true;
 		return false;
 	}
 
