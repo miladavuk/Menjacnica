@@ -15,30 +15,35 @@ public class Kurs {
 		return nazivValute;
 	}
 	public void setNazivValute(String nazivValute) {
+		if(nazivValute==null) throw new RuntimeException("Naziv valute ne sme biti null!");
 		this.nazivValute = nazivValute;
 	}
 	public String getSkrNazivValute() {
 		return skrNazivValute;
 	}
 	public void setSkrNazivValute(String skrNazivValute) {
+		if(skrNazivValute==null) throw new RuntimeException("Skraceni naziv valute ne sme biti null!");
 		this.skrNazivValute = skrNazivValute;
 	}
 	public String getVrsta() {
 		return vrsta;
 	}
 	public void setVrsta(String vrsta) {
+		if(vrsta==null) throw new RuntimeException("Vrsta kursa ne sme biti null!");
 		this.vrsta = vrsta;
 	}
 	public double getIznos() {
 		return iznos;
 	}
 	public void setIznos(double iznos) {
+		if(iznos<=0) throw new RuntimeException("Iznos mora biti veci od nule!");
 		this.iznos = iznos;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum==null) throw new RuntimeException("Datum ne sme biti null!");
 		this.datum = datum;
 	}
 	@Override
